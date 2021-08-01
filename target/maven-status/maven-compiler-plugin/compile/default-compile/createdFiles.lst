@@ -1,0 +1,12 @@
+repository/PersonRepository.class
+app/PersonApp.class
+app/Exercise1.class
+repository/CityRepository.class
+model/City.class
+model/Person.class
+app/SEX.class
+app/CityApp.class
+app/Exercise2.class
+app/Exercise4.class
+data/PersonGenerator.class
+app/Exercise3.class
