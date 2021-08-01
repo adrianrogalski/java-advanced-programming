@@ -1,6 +1,7 @@
 repository/PersonRepository.class
 app/PersonApp.class
 app/Exercise1.class
+app/Names.class
 repository/CityRepository.class
 model/City.class
 model/Person.class
@@ -9,4 +10,5 @@ app/CityApp.class
 app/Exercise2.class
 app/Exercise4.class
 data/PersonGenerator.class
+javafx/JavaFxApp.class
 app/Exercise3.class
