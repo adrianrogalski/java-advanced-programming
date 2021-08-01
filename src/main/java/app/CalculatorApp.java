@@ -16,8 +16,23 @@ public class CalculatorApp {
             return;
         }
 
-        double a = Double.parseDouble(args[0]);
-        double b = Double.parseDouble(args[1]);
+        double a;
+        double b;
+
+        try {
+            a = Double.parseDouble(args[0]);
+        }
+        catch (NumberFormatException e) {
+            operandError(args, 0);
+            return;
+        }
+        try {
+            b = Double.parseDouble(args[1]);
+        }
+        catch (NumberFormatException e) {
+            operandError(args, 1);
+            return;
+        }
         String character = String.valueOf(args[2]);
 
         // Operując na typach prostych moge spokojnie używać instrukcji for, switch, if etc.
@@ -35,8 +50,16 @@ public class CalculatorApp {
                 System.out.println(a / b);
                 break;
             default:
-                System.out.println("Nie rozpoznano znaku");
+                operatorError("Nieznany operator!");
         }
+    }
+
+    private static void operatorError(String s) {
+        System.err.println(s);
+    }
+
+    private static void operandError(String[] args, int i) {
+        System.err.println("Błąd w formacie liczby! Wpisałeś: " + args[i]);
     }
 
     public static void help() {
