@@ -89,7 +89,6 @@ public class PersonApp {
         String firstLetters = repository.findAll()
                 .map(person -> person.getName().substring(0))
                 .reduce("", (accumulator, nextChar) -> accumulator + nextChar);
-
         repository.findAll()
                 .max(Comparator.comparingDouble(Person::getHeight));
 
